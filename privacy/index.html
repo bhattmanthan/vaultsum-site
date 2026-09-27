@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy · Vaultsum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#fff; --ink:#101418; --muted:#5b636b; --line:#e3e6e9; --teal:#0f8b7d; --tint:#f4f6f7; color-scheme: light dark; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0f1215; --ink:#e8ebee; --muted:#9aa3ab; --line:#262c31; --teal:#4fd1bf; --tint:#171b1f; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 Figtree, system-ui, sans-serif; }
+  main { max-width:720px; margin:0 auto; padding:40px 16px 64px; }
+  h1 { font-size:2rem; line-height:1.2; margin:0 0 8px; }
+  h2 { font-size:1.2rem; margin:40px 0 8px; }
+  p, li { color:var(--ink); }
+  em { color:var(--muted); font-style:normal; }
+  a { color:var(--teal); }
+  code { background:var(--tint); padding:1px 5px; border-radius:6px; font-size:.92em; }
+  table { width:100%; border-collapse:collapse; margin:16px 0; font-size:.95rem; display:block; overflow-x:auto; }
+  th, td { text-align:left; vertical-align:top; padding:10px 12px 10px 0; border-bottom:1px solid var(--line); }
+  th { color:var(--muted); font-weight:600; }
+  footer { margin-top:56px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
+</style>
+</head>
+<body>
+<main>
+<h1>Privacy Policy — Vaultsum</h1>
+<p><em>Last updated: 27 September 2026</em></p>
+<p>Vaultsum is a personal expense tracker for Android. It is built to keep your financial
+data on your phone. This policy explains what the app handles, where it goes, and how
+to delete it.</p>
+<p><strong>Contact and grievance officer:</strong> Manthan Bhatt, <a href="mailto:vaultsum.app@gmail.com">vaultsum.app@gmail.com</a>. This covers questions, complaints,
+and requests to access, correct or erase your data, including under India&#39;s Digital Personal
+Data Protection Act, 2023. We reply within 30 days.</p>
+<h2>1. Your personal finances stay on your phone</h2>
+<p>Your accounts, transactions, categories, tags, budgets, scheduled entries, attachments
+and settings are stored <strong>only on your device</strong>.</p>
+<ul>
+<li>The database is encrypted (SQLCipher, AES-256). Its key is generated on the device and
+protected by the Android Keystore.</li>
+<li>This data is never uploaded to us or to anyone else. There is no cloud sync.</li>
+<li>Android&#39;s automatic cloud backup is turned off for this app.</li>
+<li>Backups happen only when you export a file yourself, or when you turn on automatic
+backup and pick a folder. You choose where they go. Automatic backups are always
+encrypted with your passphrase (AES-256-GCM); if the folder is synced by a cloud app,
+that app uploads the encrypted file. We never receive it.</li>
+<li>Attachment files you add are encrypted on the device as well.</li>
+<li>The app contains <strong>no analytics, advertising, tracking or crash-reporting SDKs</strong>.</li>
+</ul>
+<h2>2. Exchange rates (internet use)</h2>
+<p>Once a day the app downloads public currency exchange rates from <code>open.er-api.com</code>. The
+request contains only your base currency code (for example <code>INR</code>). It never contains
+any of your financial data.</p>
+<h2>3. Transaction detection from notifications (optional, off by default)</h2>
+<p>If you turn on <strong>Notification detection</strong> and grant notification access, the app reads
+notifications <strong>only from the apps you switch on</strong>. These are Google Pay, PhonePe and
+Paytm, plus bank SMS (SBI, ICICI, HDFC, Axis, Kotak, Bank of Baroda, PNB, YES BANK and
+IDFC FIRST) as shown by Google Messages, Samsung Messages or Truecaller. The app
+ignores every other notification without reading it.</p>
+<p>From the notifications it does read, the app extracts the amount, the merchant or
+sender, and whether money went in or out. It then suggests a transaction for you to
+review. Nothing is saved until you confirm it. Detection runs entirely on your phone
+and nothing is sent anywhere. The app does not request the SMS permission.</p>
+<p>You can revoke access at any time in Android Settings → Notification access.</p>
+<h2>4. Groups — shared expenses (optional, uses the cloud)</h2>
+<p>Groups is the only feature that stores data online. It runs on Google Firebase
+(Authentication, Cloud Firestore and Cloud Messaging), operated by Google. Nothing is
+sent until you open Groups and sign in. You are asked to confirm before you create or
+join a group.</p>
+<p>When you use Groups, the following is stored in Firebase:</p>
+<table>
+<thead>
+<tr>
+<th>Data</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Your Google account email and name (if you sign in with Google)</td>
+<td>Sign-in, and matching invites sent to your email</td>
+</tr>
+<tr>
+<td>Your phone number (if you signed in with a phone number in an earlier version)</td>
+<td>Sign-in (one-time code by SMS) and matching invites to you</td>
+</tr>
+<tr>
+<td>Display name and optional UPI ID</td>
+<td>Shown to members of your groups; the UPI ID pre-fills payments when someone settles up with you</td>
+</tr>
+<tr>
+<td>Groups you create or join: name, currency, members</td>
+<td>To run the group</td>
+</tr>
+<tr>
+<td>Shared expenses and settlements: description, amount, who paid, the split</td>
+<td>To work out who owes whom</td>
+</tr>
+<tr>
+<td>Invites you send: the invitee&#39;s phone number or email address</td>
+<td>So that person can join</td>
+</tr>
+<tr>
+<td>Push-notification tokens for your device</td>
+<td>To tell you about new group activity (the notification text never contains amounts or names)</td>
+</tr>
+</tbody></table>
+<p>This data is visible only to the members of the group concerned. Access is enforced by
+server-side security rules. It is encrypted in transit (TLS) and at rest by Google.
+<strong>Settle up never moves money.</strong> It opens your own UPI app with the details filled in.</p>
+<p><strong>If you invite someone,</strong> you share their phone number or email address with us so that they can join.
+Please invite only people who expect it.</p>
+<p>Google&#39;s own handling of this data is described at <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a>.</p>
+<h2>5. Permissions</h2>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Used for</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Internet, network state</td>
+<td>The daily exchange-rate download; Groups</td>
+</tr>
+<tr>
+<td>Notifications</td>
+<td>Reminders for scheduled entries; the &quot;transactions detected&quot; alert; Groups activity</td>
+</tr>
+<tr>
+<td>Exact alarms</td>
+<td>Reminders at the time you set</td>
+</tr>
+<tr>
+<td>Run at startup</td>
+<td>Re-arming reminders after a reboot</td>
+</tr>
+<tr>
+<td>Biometric / screen lock</td>
+<td>The optional app lock</td>
+</tr>
+<tr>
+<td>Notification access (special access, which you grant in system settings)</td>
+<td>Transaction detection (section 3)</td>
+</tr>
+</tbody></table>
+<h2>6. Deleting your data</h2>
+<ul>
+<li><strong>Personal data:</strong> Settings → <em>Clear all data</em>, or uninstall the app. Both erase it
+permanently from the device. We hold no copy.</li>
+<li><strong>Groups account:</strong> Groups → Profile → <em>Delete Groups account</em> deletes your profile,
+UPI ID, device tokens and sign-in. Expenses and settlements you added to shared groups
+stay visible to the other members, together with your name and phone number, so their
+balances still add up. To have those removed too, email <a href="mailto:vaultsum.app@gmail.com">vaultsum.app@gmail.com</a>
+from any device, giving the phone number or Google email you signed in with. We will act on it within
+30 days.</li>
+</ul>
+<h2>7. Children</h2>
+<p>The app is meant for adults. It is not directed at anyone under 18, and Groups should not be used by them.</p>
+<h2>8. Changes</h2>
+<p>Changes to this policy are posted at this address, with the date updated at the top.</p>
+<footer>Vaultsum · <a href="../privacy/">Privacy policy</a> · <a href="../delete-account/">Delete your data</a></footer>
+</main>
+</body>
+</html>
