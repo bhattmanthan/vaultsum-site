@@ -42,6 +42,11 @@
   .card p { margin:0; color:var(--muted); font-size:.97rem; }
   .online { border-left:3px solid var(--teal); padding:4px 0 4px 16px; color:var(--muted); }
   .online b { color:var(--ink); }
+  .support { display:flex; gap:24px; align-items:center; flex-wrap:wrap; background:var(--tint); border-radius:16px; padding:20px; }
+  .support img { width:150px; height:150px; border-radius:12px; background:#fff; padding:6px; }
+  .support div { flex:1 1 260px; }
+  .support p { margin:0 0 16px; }
+  @media (hover:hover) and (pointer:fine) { .upi-btn { display:none; } }
   footer { margin-top:64px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
 </style>
 </head>
@@ -79,6 +84,17 @@
 <p class="online"><b>Your personal finances never leave your phone.</b> Two things do use the internet: a once-a-day exchange-rate
   download (only your base currency code is sent), and <b>Groups</b>, which is optional, needs a Google sign-in and stores shared expenses in
   Firebase so your friends can see them. Details in the <a href="privacy/">privacy policy</a>.</p>
+
+<h2>Support Vaultsum</h2>
+<div class="support">
+  <img src="upi-qr.svg" alt="UPI QR code for bhattmanthan8@oksbi">
+  <div>
+    <p>Vaultsum is free for as long as I can keep it running. No ads, no subscription. If it helps you and you'd
+      like to chip in, any amount over UPI is welcome.</p>
+    <a class="cta upi-btn" href="upi://pay?pa=bhattmanthan8@oksbi&amp;pn=Vaultsum&amp;tn=Support%20Vaultsum&amp;cu=INR">Pay with UPI</a>
+    <span class="note">Scan with any UPI app, or pay to <b>bhattmanthan8@oksbi</b>.</span>
+  </div>
+</div>
 
 <footer>© 2026 Manthan Bhatt · <a href="privacy/">Privacy policy</a> · <a href="delete-account/">Delete your data</a> ·
   Press and partnerships: <a href="mailto:vaultsum.app@gmail.com">vaultsum.app@gmail.com</a></footer>
