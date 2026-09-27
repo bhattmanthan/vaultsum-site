@@ -1,1 +1,87 @@
-<!doctype html><meta charset="utf-8"><title>Vaultsum</title><link rel="icon" href="icon.svg" type="image/svg+xml"><meta http-equiv="refresh" content="0; url=privacy/"><a href="privacy/">Vaultsum privacy policy</a>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vaultsum · Expense tracker that stays on your phone</title>
+<meta name="description" content="Vaultsum is an Android expense tracker. Your accounts and transactions live in an encrypted database on your phone, with no account and no cloud copy.">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#101418">
+<meta property="og:title" content="Vaultsum · Expense tracker that stays on your phone">
+<meta property="og:description" content="Offline-first, encrypted, and it reads your GPay, PhonePe and bank SMS alerts so you don't have to type. Beta opening soon.">
+<meta property="og:site_name" content="Vaultsum">
+<meta property="og:url" content="https://vaultsum.manthan.runs-on.dev/">
+<meta property="og:image" content="https://vaultsum.manthan.runs-on.dev/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#fff; --ink:#101418; --muted:#5b636b; --line:#e3e6e9; --teal:#0f8b7d; --tint:#f4f6f7; --on-ink:#fff; color-scheme: light dark; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0f1215; --ink:#e8ebee; --muted:#9aa3ab; --line:#262c31; --teal:#4fd1bf; --tint:#171b1f; --on-ink:#0f1215; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:17px/1.6 Figtree, system-ui, sans-serif; }
+  main { max-width:960px; margin:0 auto; padding:32px 16px 64px; }
+  a { color:var(--teal); }
+  .brand { display:flex; align-items:center; gap:12px; font-weight:700; font-size:1.25rem; }
+  .brand img { width:40px; height:40px; border-radius:10px; box-shadow:0 0 0 1px var(--line); }
+  .hero { padding:56px 0 32px; max-width:680px; }
+  h1 { font-size:clamp(2.2rem, 6vw, 3.4rem); line-height:1.08; font-weight:800; margin:0 0 16px; letter-spacing:-.02em; }
+  h1 span { color:var(--teal); }
+  .lead { font-size:1.15rem; color:var(--muted); margin:0 0 28px; }
+  .cta { display:inline-block; background:var(--ink); color:var(--on-ink); text-decoration:none; font-weight:700; padding:14px 24px; border-radius:999px; }
+  .note { display:block; margin-top:12px; font-size:.92rem; color:var(--muted); }
+  .shots { display:flex; gap:16px; overflow-x:auto; padding:8px 8px 24px; scroll-snap-type:x mandatory; }
+  .shots figure { margin:0; flex:0 0 max(200px, calc((100% - 48px) / 4)); max-width:62vw; scroll-snap-align:start; }
+  .shots img { width:100%; aspect-ratio:9/16; border-radius:22px; box-shadow:0 0 0 6px var(--ink), 0 12px 32px rgba(0,0,0,.18); display:block; }
+  .shots figcaption { font-size:.9rem; color:var(--muted); text-align:center; margin-top:14px; }
+  h2 { font-size:1.5rem; margin:48px 0 16px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:16px; }
+  .card { background:var(--tint); border-radius:16px; padding:18px 20px; }
+  .card b { display:block; margin-bottom:4px; }
+  .card p { margin:0; color:var(--muted); font-size:.97rem; }
+  .online { border-left:3px solid var(--teal); padding:4px 0 4px 16px; color:var(--muted); }
+  .online b { color:var(--ink); }
+  footer { margin-top:64px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
+</style>
+</head>
+<body>
+<main>
+<div class="brand"><img src="icon.svg" alt="">Vaultsum</div>
+
+<section class="hero">
+  <h1>An expense tracker that stays <span>on your phone.</span></h1>
+  <p class="lead">Your accounts and transactions live in an encrypted database on your Android phone. No sign-up, no cloud
+    copy, and it reads your GPay, PhonePe and bank SMS alerts so you don't have to type every payment.</p>
+  <!-- Swap for the Play closed-testing Google Group link once it exists. -->
+  <a class="cta" href="mailto:vaultsum.app@gmail.com?subject=Join%20the%20Vaultsum%20beta&amp;body=Hi%2C%20I%27d%20like%20to%20join%20the%20Vaultsum%20beta.%0A%0AName%3A%20%0APhone%20number%3A%20%0AGmail%20I%20use%20on%20the%20Play%20Store%20%28if%20different%20from%20this%20one%29%3A%20%0A">Join the beta</a>
+  <span class="note">Android 8+. Coming soon to Google Play; beta testers get it first.</span>
+</section>
+
+<div class="shots">
+  <figure><img src="shots/home.webp" alt="Home screen: ₹77,023 spent in September with daily bars and a budget warning" loading="lazy"><figcaption>Spending first</figcaption></figure>
+  <figure><img src="shots/detected-review.webp" alt="Review screen for a payment detected from a notification" loading="lazy"><figcaption>Payments detected for you</figcaption></figure>
+  <figure><img src="shots/insights.webp" alt="Insights: a donut chart of spending by category" loading="lazy"><figcaption>Where it all went</figcaption></figure>
+  <figure><img src="shots/widgets.webp" alt="Home-screen widgets showing a balance and the month's budget" loading="lazy"><figcaption>Six widgets</figcaption></figure>
+</div>
+
+<h2>What it does</h2>
+<div class="grid">
+  <div class="card"><b>Private by default</b><p>SQLCipher-encrypted database, app lock, hide-amounts mode, encrypted backups. No account needed.</p></div>
+  <div class="card"><b>Less typing</b><p>Turns GPay, PhonePe, Paytm and SBI/HDFC/ICICI and other bank alerts into transactions you confirm. No SMS permission.</p></div>
+  <div class="card"><b>Budgets and insights</b><p>Monthly budgets that warn at 80%, category breakdowns, trends and a spending calendar.</p></div>
+  <div class="card"><b>Bills on autopilot</b><p>Recurring and future-dated entries post themselves when due, with reminders.</p></div>
+  <div class="card"><b>Many currencies</b><p>Accounts in any currency, cross-currency transfers, net worth in your base currency.</p></div>
+  <div class="card"><b>Split with friends</b><p>Optional Groups: share expenses, simplify debts, settle up through your own UPI app.</p></div>
+</div>
+
+<h2>What goes online</h2>
+<p class="online"><b>Your personal finances never leave your phone.</b> Two things do use the internet: a once-a-day exchange-rate
+  download (only your base currency code is sent), and <b>Groups</b>, which is optional, needs a Google sign-in and stores shared expenses in
+  Firebase so your friends can see them. Details in the <a href="privacy/">privacy policy</a>.</p>
+
+<footer>© 2026 Manthan Bhatt · <a href="privacy/">Privacy policy</a> · <a href="delete-account/">Delete your data</a> ·
+  Press and partnerships: <a href="mailto:vaultsum.app@gmail.com">vaultsum.app@gmail.com</a></footer>
+</main>
+</body>
+</html>
