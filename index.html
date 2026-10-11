@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vaultsum · Expense tracker that stays on your phone</title>
-<meta name="description" content="Vaultsum is an Android expense tracker. Your accounts and transactions live in an encrypted database on your phone, with no account and no cloud copy.">
+<title>Vaultsum · UPI expense tracker that stays on your phone</title>
+<meta name="description" content="Vaultsum is a UPI expense tracker and budget app for Android. It picks up your GPay, PhonePe, Paytm and bank SMS payments, and keeps your data in an encrypted database on your phone. No account, no ads.">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="theme-color" content="#101418">
-<meta property="og:title" content="Vaultsum · Expense tracker that stays on your phone">
-<meta property="og:description" content="Offline-first, encrypted, and it reads your GPay, PhonePe and bank SMS alerts so you don't have to type. Beta opening soon.">
+<meta property="og:title" content="Vaultsum · UPI expense tracker that stays on your phone">
+<meta property="og:description" content="Picks up your GPay, PhonePe and bank SMS payments so you don't have to type them. Encrypted on your phone, no account, no ads. Beta open now.">
 <meta property="og:site_name" content="Vaultsum">
 <meta property="og:url" content="https://vaultsum.manthan.runs-on.dev/">
 <meta property="og:image" content="https://vaultsum.manthan.runs-on.dev/og.png">
@@ -47,6 +47,9 @@
   .support div { flex:1 1 260px; }
   .support p { margin:0 0 16px; }
   @media (hover:hover) and (pointer:fine) { .upi-btn { display:none; } }
+  .faq details { border-bottom:1px solid var(--line); padding:14px 0; }
+  .faq summary { font-weight:700; cursor:pointer; }
+  .faq p { margin:8px 0 0; color:var(--muted); }
   footer { margin-top:64px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
 </style>
 </head>
@@ -58,9 +61,10 @@
   <h1>An expense tracker that stays <span>on your phone.</span></h1>
   <p class="lead">Your accounts and transactions live in an encrypted database on your Android phone. No sign-up, no cloud
     copy, and it reads your GPay, PhonePe and bank SMS alerts so you don't have to type every payment.</p>
-  <!-- Closed test: people email, then you add their Gmail to the vaultsum-testers Google Group. -->
-  <a class="cta" href="mailto:vaultsum.app@gmail.com?subject=Join%20the%20Vaultsum%20beta&amp;body=Hi%2C%20I%27d%20like%20to%20join%20the%20Vaultsum%20beta.%0A%0AGmail%20I%20use%20on%20the%20Play%20Store%20%28if%20different%20from%20this%20one%29%3A%20%0A">Join the beta</a>
-  <span class="note">Android 8+. Closed beta on Google Play: email us and we'll send an invite to your Gmail.</span>
+  <!-- Closed test. At launch, point this at the Play listing with &referrer=utm_source=site and drop the steps. -->
+  <a class="cta" href="https://groups.google.com/g/vaultsum-testers">Join the beta</a>
+  <span class="note">Android 8+. Two steps with the Gmail you use on the Play Store: join the tester group, then
+    <a href="https://play.google.com/apps/testing/in.expenseledger.app">opt in on Google Play</a> and install.</span>
 </section>
 
 <div class="shots">
@@ -84,6 +88,33 @@
 <p class="online"><b>Your personal finances never leave your phone.</b> Two things do use the internet: a once-a-day exchange-rate
   download (only your base currency code is sent), and <b>Groups</b>, which is optional, needs a Google sign-in and stores shared expenses in
   Firebase so your friends can see them. Details in the <a href="privacy/">privacy policy</a>.</p>
+
+<h2>Questions</h2>
+<div class="faq">
+  <details><summary>Why does it need notification access?</summary>
+    <p>That's how it sees a payment the moment GPay, PhonePe, Paytm or your bank's SMS tells you about it. It only looks
+      at the apps you switch on in its settings and ignores every other notification. Each payment it finds waits for
+      you to confirm before it's saved. You can skip this and type entries yourself.</p></details>
+  <details><summary>Does it read my SMS or my OTPs?</summary>
+    <p>It never asks for permission to read your SMS. When you turn on bank alerts, it reads the notification your SMS
+      app shows for a new message, and only keeps ones that look like a payment. OTPs and promotional messages are
+      skipped.</p></details>
+  <details><summary>Which banks and payment apps work?</summary>
+    <p>Google Pay, PhonePe and Paytm, plus bank SMS alerts from SBI, HDFC, ICICI, Axis, Kotak and most other Indian
+      banks. If an alert isn't recognised, you can still add the payment in a few taps.</p></details>
+  <details><summary>Is my data uploaded anywhere?</summary>
+    <p>No. Your accounts and transactions stay in an encrypted database on your phone, and there's no Vaultsum account
+      to sign up for. The only parts that go online are the daily exchange-rate download and Groups, if you choose to
+      use it.</p></details>
+  <details><summary>What happens if I change phones?</summary>
+    <p>Export a password-protected backup, or set up automatic daily or weekly backups to a folder you pick, such as
+      one synced by Google Drive. Restore it on the new phone.</p></details>
+  <details><summary>How do I split bills with friends?</summary>
+    <p>Create a group, add expenses with equal, exact or percentage splits, and Vaultsum works out the fewest payments
+      to settle up. "Settle up" opens your own UPI app with the details filled in. Vaultsum never touches your money.</p></details>
+  <details><summary>Is it free? Is there an iPhone version?</summary>
+    <p>It's free, with no ads and no subscription. It's Android only for now (Android 8 and up).</p></details>
+</div>
 
 <h2>Support Vaultsum</h2>
 <div class="support">
