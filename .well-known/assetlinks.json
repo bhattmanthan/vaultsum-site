@@ -1,0 +1,11 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "in.expenseledger.app",
+    "sha256_cert_fingerprints": [
+      "81:BD:3B:70:B8:22:07:07:0B:1D:D9:96:A6:91:59:96:F9:CB:EF:43:9C:01:26:B2:C3:B1:EB:E5:F0:47:86:94",
+      "9E:86:25:C2:9D:23:16:95:FC:76:11:EC:4F:3F:93:0F:54:E6:A0:DB:E9:2A:19:FD:C4:CA:44:5A:B1:D1:0F:83"
+    ]
+  }
+}]
