@@ -79,7 +79,8 @@ and nothing is sent anywhere. The app does not request the SMS permission.</p>
 <p>You can revoke access at any time in Android Settings → Notification access.</p>
 <h2>4. Groups — shared expenses (optional, uses the cloud)</h2>
 <p>Groups is the only feature that stores data online. It runs on Google Firebase
-(Authentication, Cloud Firestore and Cloud Messaging), operated by Google. Nothing is
+(Authentication, Cloud Firestore and Cloud Messaging), operated by Google, plus a small
+relay on Cloudflare that sends push notifications (see below). Nothing is
 sent until you open Groups and sign in. You are asked to confirm before you create or
 join a group.</p>
 <p>When you use Groups, the following is stored in Firebase:</p>
@@ -100,14 +101,14 @@ join a group.</p>
 </tr>
 <tr>
 <td>Display name and optional UPI ID</td>
-<td>Shown to members of your groups; the UPI ID pre-fills payments when someone settles up with you</td>
+<td>Shown to members of your groups so they can pay you; Settle up copies it so they can paste it into their UPI app</td>
 </tr>
 <tr>
 <td>Groups you create or join: name, currency, members</td>
 <td>To run the group</td>
 </tr>
 <tr>
-<td>Shared expenses and settlements: description, amount, who paid, the split</td>
+<td>Shared expenses and settlements: description, amount, who paid, the split, and whether the person paid confirmed receiving a settlement</td>
 <td>To work out who owes whom</td>
 </tr>
 <tr>
@@ -121,7 +122,14 @@ join a group.</p>
 </tbody></table>
 <p>This data is visible only to the members of the group concerned. Access is enforced by
 server-side security rules. It is encrypted in transit (TLS) and at rest by Google.
-<strong>Settle up never moves money.</strong> It opens your own UPI app with the details filled in.</p>
+<strong>Settle up never moves money.</strong> It copies the other person&#39;s UPI ID and opens your own UPI app;
+you make the payment there.</p>
+<p><strong>Push relay.</strong> When you add an expense or a settlement, the app sends the group and item ids, together
+with your sign-in token, to a small Cloudflare Worker that we run. It checks that you wrote the item and
+that you are in the group, then asks Google to send the notification. It reads the item to do that check
+but keeps and forwards none of its contents, and it never sees names in the notification text. Cloudflare
+may keep standard request logs (such as IP address), as any web host does; see
+<a href="https://www.cloudflare.com/privacypolicy/">https://www.cloudflare.com/privacypolicy/</a>.</p>
 <p><strong>If you invite someone,</strong> you share their phone number or email address with us so that they can join.
 Please invite only people who expect it.</p>
 <p>Google&#39;s own handling of this data is described at <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a>.</p>
