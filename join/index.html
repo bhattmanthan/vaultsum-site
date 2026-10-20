@@ -31,9 +31,12 @@
 </main>
 <script>
   // The app handles this URL itself when installed; this button is the fallback for browsers
-  // that opened the page instead (custom-scheme intent, ignored if the app isn't there).
+  // that opened the page instead. An Android intent URL pinned to our package (not a custom
+  // scheme another app could claim); without the app, Chrome falls back to the Play listing.
   var id = new URLSearchParams(location.search).get('i') || '';
-  document.getElementById('open').href = /^[A-Za-z0-9]+$/.test(id) ? 'expensetracker://join/' + id : '#';
+  document.getElementById('open').href = /^[A-Za-z0-9]+$/.test(id)
+    ? 'intent://vaultsum.manthan.runs-on.dev/join/?i=' + id + '#Intent;scheme=https;package=in.expenseledger.app;end'
+    : '#';
 </script>
 </body>
 </html>

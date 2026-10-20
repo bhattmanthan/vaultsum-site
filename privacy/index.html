@@ -40,7 +40,7 @@
 <main>
 <a class="brand" href="../"><img src="../icon.svg" alt=""><div><b>Vaultsum</b><span>Expense Tracker for Android</span></div></a>
 <h1>Privacy Policy — Vaultsum</h1>
-<p><em>Last updated: 27 September 2026</em></p>
+<p><em>Last updated: 20 October 2026</em></p>
 <p>Vaultsum is a personal expense tracker for Android. It is built to keep your financial
 data on your phone. This policy explains what the app handles, where it goes, and how
 to delete it.</p>
@@ -60,12 +60,15 @@ backup and pick a folder. You choose where they go. Automatic backups are always
 encrypted with your passphrase (AES-256-GCM); if the folder is synced by a cloud app,
 that app uploads the encrypted file. We never receive it.</li>
 <li>Attachment files you add are encrypted on the device as well.</li>
+<li>With <strong>App lock</strong> on, the app also hides itself from the recent-apps screen and screenshots,
+and home-screen widgets hide their figures.</li>
 <li>The app contains <strong>no analytics, advertising, tracking or crash-reporting SDKs</strong>.</li>
 </ul>
 <h2>2. Exchange rates (internet use)</h2>
-<p>Once a day the app downloads public currency exchange rates from <code>open.er-api.com</code>. The
-request contains only your base currency code (for example <code>INR</code>). It never contains
-any of your financial data.</p>
+<p>If you have accounts in more than one currency, the app downloads public currency exchange
+rates from <code>open.er-api.com</code> once a day. The request contains only your base currency code
+(for example <code>INR</code>). It never contains any of your financial data. Like any web request, it
+also shows your device&#39;s IP address to that service.</p>
 <h2>3. Transaction detection from notifications (optional, off by default)</h2>
 <p>If you turn on <strong>Notification detection</strong> and grant notification access, the app reads
 notifications <strong>only from the apps you switch on</strong>. These are Google Pay, PhonePe and
@@ -117,17 +120,19 @@ join a group.</p>
 </tr>
 <tr>
 <td>Push-notification tokens for your device</td>
-<td>To tell you about new group activity (the notification text never contains amounts or names)</td>
+<td>To tell you about new group activity (the notification text never contains amounts, people&#39;s names or group names)</td>
 </tr>
 </tbody></table>
 <p>This data is visible only to the members of the group concerned. Access is enforced by
 server-side security rules. It is encrypted in transit (TLS) and at rest by Google.
 <strong>Settle up never moves money.</strong> It copies the other person&#39;s UPI ID and opens your own UPI app;
-you make the payment there.</p>
+you make the payment there. A payment you record, cash included, shows as &quot;awaiting
+confirmation&quot; until the person you paid confirms they received it.</p>
 <p><strong>Push relay.</strong> When you add an expense or a settlement, the app sends the group and item ids, together
 with your sign-in token, to a small Cloudflare Worker that we run. It checks that you wrote the item and
 that you are in the group, then asks Google to send the notification. It reads the item to do that check
-but keeps and forwards none of its contents, and it never sees names in the notification text. Cloudflare
+but keeps and forwards none of its contents. It only adds a timestamp to the item so the notification is
+sent once. Cloudflare
 may keep standard request logs (such as IP address), as any web host does; see
 <a href="https://www.cloudflare.com/privacypolicy/">https://www.cloudflare.com/privacypolicy/</a>.</p>
 <p><strong>If you invite someone,</strong> you share their phone number or email address with us so that they can join.
@@ -177,9 +182,36 @@ balances still add up. To have those removed too, email <a href="mailto:vaultsum
 from any device, giving the phone number or Google email you signed in with. We will act on it within
 30 days.</li>
 </ul>
-<h2>7. Children</h2>
+<h2>7. Data breaches</h2>
+<p>If a security incident affects personal data held for Groups, we will tell the affected users without
+undue delay, explaining what happened and what they can do. We will also report it to the Data Protection
+Board of India and, for users in the EU, EEA or UK, to the relevant data-protection authority within
+72 hours where the law requires.</p>
+<h2>8. If you are in the EU, EEA or UK (GDPR)</h2>
+<ul>
+<li><strong>Who is responsible:</strong> Manthan Bhatt (Vaultsum) is the controller for Groups data. Contact
+<a href="mailto:vaultsum.app@gmail.com">vaultsum.app@gmail.com</a>.</li>
+<li><strong>Your personal finances</strong> never reach us, so we do not process them. They stay on your device
+(section 1).</li>
+<li><strong>Legal basis:</strong> we process Groups data to provide the Groups service you choose to use (performance of
+a contract, Article 6(1)(b) GDPR). The exchange-rate download (section 2) relies on our legitimate
+interest in showing you converted totals (Article 6(1)(f)). It carries no personal data beyond the
+IP address that any web request reveals.</li>
+<li><strong>How long we keep it:</strong> Groups data stays until you delete it or your Groups account (section 6).
+Invites expire after 14 days. They are deleted when accepted, revoked, or when the group is deleted.
+The push relay stores nothing. Cloudflare&#39;s standard request logs follow Cloudflare&#39;s own retention.</li>
+<li><strong>Transfers outside your country:</strong> Google (Firebase) and Cloudflare may process Groups data outside
+the EU, EEA or UK, including in the United States and India. They do so under the safeguards those
+providers offer, such as the European Commission&#39;s Standard Contractual Clauses and, where they
+apply, the EU–U.S. Data Privacy Framework.</li>
+<li><strong>Your rights:</strong> you can ask to access, correct, delete, restrict or export your data, or object to
+our processing. Email us and we reply within one month. You can also complain to your local
+data-protection authority.</li>
+<li>We do not sell your data, and we make no automated decisions or profiles about you.</li>
+</ul>
+<h2>9. Children</h2>
 <p>The app is meant for adults. It is not directed at anyone under 18, and Groups should not be used by them.</p>
-<h2>8. Changes</h2>
+<h2>10. Changes</h2>
 <p>Changes to this policy are posted at this address, with the date updated at the top.</p>
 <footer>© 2026 Manthan Bhatt · Vaultsum · <a href="../privacy/">Privacy policy</a> · <a href="../delete-account/">Delete your data</a></footer>
 </main>
