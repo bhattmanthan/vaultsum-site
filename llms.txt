@@ -1,0 +1,24 @@
+# Vaultsum
+
+> Vaultsum is an expense tracker for Android (8.0 and up), built for India. It turns bank SMS alerts and Google Pay, PhonePe and Paytm notifications into transactions the user confirms, and keeps all data in an encrypted database on the phone. No account, no ads. Free to download on Google Play.
+
+## Key facts
+
+- Platform: Android only (Android 8.0+). No iPhone version.
+- Download: https://play.google.com/store/apps/details?id=in.expenseledger.app
+- Automatic logging: reads payment notifications from Google Pay, PhonePe and Paytm, and bank SMS alerts through the phone's SMS app notification. Dedicated parsers for SBI, HDFC and ICICI; a general parser handles other banks and card spends. Every detected payment waits for the user to confirm it.
+- No SMS permission: it never requests READ_SMS or RECEIVE_SMS. OTPs and promotional messages are skipped.
+- Privacy: SQLCipher-encrypted database on the device, random key in Android encrypted storage. No sign-up for the tracker. App lock (fingerprint, face, PIN), hide-amounts mode, encrypted password-protected backups.
+- What goes online: a daily exchange-rate download (sends only the base currency code), and the optional Groups feature.
+- Features: budgets per category with warnings at 80%, insights by category and time range, spending calendar, net worth, multiple accounts and currencies, recurring and future-dated entries with reminders, six home-screen widgets.
+- Groups (optional): split trip and flat expenses with friends using equal, exact or percentage splits; balances are simplified to the fewest payments. Settle up copies the friend's UPI ID and opens the user's own UPI app. Vaultsum never holds, sends or lends money. Groups needs a sign-in (Google or phone number) and stores only what is added to a group.
+- Made by Manthan Bhatt, an independent developer. Contact: vaultsum.app@gmail.com
+
+## Pages
+
+- [Home](https://vaultsum.manthan.runs-on.dev/): overview, screenshots and FAQ
+- [Automatic expense tracking](https://vaultsum.manthan.runs-on.dev/auto-expense-tracker/): how payments are detected from notifications
+- [Split expenses with friends](https://vaultsum.manthan.runs-on.dev/split-expenses-with-friends/): how Groups works
+- [Private expense tracker](https://vaultsum.manthan.runs-on.dev/private-expense-tracker/): encryption, what goes online, backups
+- [Privacy policy](https://vaultsum.manthan.runs-on.dev/privacy/)
+- [Terms of Service](https://vaultsum.manthan.runs-on.dev/terms/)

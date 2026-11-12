@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Automatic expense tracker from bank SMS and payment apps · Vaultsum</title>
+<meta name="description" content="Vaultsum logs your payments from bank SMS alerts and Google Pay, PhonePe and Paytm notifications. No SMS permission, nothing saved until you confirm. Android.">
+<link rel="canonical" href="https://vaultsum.manthan.runs-on.dev/auto-expense-tracker/">
+<link rel="icon" href="../icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta name="theme-color" content="#101418">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Automatic expense tracker from bank SMS and payment apps · Vaultsum">
+<meta property="og:description" content="Your payments, logged from the alerts you already get. You confirm each one. Encrypted on your phone.">
+<meta property="og:url" content="https://vaultsum.manthan.runs-on.dev/auto-expense-tracker/">
+<meta property="og:site_name" content="Vaultsum">
+<meta property="og:image" content="https://vaultsum.manthan.runs-on.dev/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../page.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+ {"@type":"Question","name":"Does Vaultsum need SMS permission?","acceptedAnswer":{"@type":"Answer","text":"No. It never asks for READ_SMS or RECEIVE_SMS. It reads the notification your SMS app shows when a bank alert arrives, and only for the sources you switch on."}},
+ {"@type":"Question","name":"Which apps and banks does it read?","acceptedAnswer":{"@type":"Answer","text":"Google Pay, PhonePe and Paytm notifications, and bank SMS alerts. SBI, HDFC and ICICI have dedicated parsers; alerts from other banks, including card spends, go through a general parser that recognises amounts, debits and credits."}},
+ {"@type":"Question","name":"Is anything saved without me checking it?","acceptedAnswer":{"@type":"Answer","text":"No. Every detected payment waits in a review list until you confirm or dismiss it."}},
+ {"@type":"Question","name":"Is my notification content uploaded?","acceptedAnswer":{"@type":"Answer","text":"No. Parsing runs on your phone, and the personal tracker has no server to send it to."}}
+]}
+</script>
+</head>
+<body>
+<main>
+<a class="brand" href="../"><img src="../icon.svg" alt=""><div><b>Vaultsum</b><span>Expense Tracker for Android</span></div></a>
+
+<h1>An expense tracker that logs payments for you</h1>
+<p class="lead">Most people stop tracking expenses because typing every payment gets old in a week. Vaultsum reads the
+  payment alerts you already get from your bank and payment apps, and turns each one into a transaction you confirm
+  with a tap.</p>
+<a class="cta" href="https://play.google.com/store/apps/details?id=in.expenseledger.app&amp;referrer=utm_source%3Dsite_auto">Get it on Google Play</a>
+
+<figure class="shot"><img src="../shots/detected-review.webp" alt="Review screen for a payment detected from a notification" loading="lazy" width="270" height="600"></figure>
+
+<h2>How it works</h2>
+<ol>
+  <li>You pay with Google Pay, PhonePe or Paytm, or your card or account is debited and your bank sends an SMS.</li>
+  <li>Vaultsum spots the notification and picks out the amount, whether money went out or came in, and the merchant or person.</li>
+  <li>The payment waits in a review list with the account and category filled in.</li>
+  <li>You confirm it, change it, or dismiss it. Nothing is saved until you do.</li>
+</ol>
+
+<h2>Where it reads from</h2>
+<ul>
+  <li><b>Payment apps:</b> Google Pay, PhonePe and Paytm.</li>
+  <li><b>Bank SMS alerts:</b> SBI, HDFC and ICICI have dedicated parsers. Alerts from Axis, Kotak and most other banks,
+    including card spends, go through a general parser that looks for an amount and a debit or credit.</li>
+  <li><b>Anything else:</b> add it yourself in a few taps, or set up recurring entries for rent, bills and subscriptions.</li>
+</ul>
+<p>Each source has its own switch, and every source is off until you turn it on. Notifications from any other app are
+  ignored before their content is read. OTPs and promotional messages are skipped.</p>
+
+<h2>No SMS permission</h2>
+<p>Vaultsum never asks to read your SMS inbox. When you turn on bank alerts, it reads the notification your SMS app
+  shows for a new message, the same text you see on your lock screen, and only keeps the ones that look like a payment.</p>
+
+<h2>Stays on your phone</h2>
+<p>Parsing happens on the device. Notification content is never uploaded or logged, and your transactions are stored in
+  an encrypted database on your phone. <a href="../private-expense-tracker/">More on privacy</a>.</p>
+
+<h2>Questions</h2>
+<div class="faq">
+  <details><summary>Does Vaultsum need SMS permission?</summary><p>No. It never asks for READ_SMS or RECEIVE_SMS. It
+    reads the notification your SMS app shows when a bank alert arrives, and only for the sources you switch on.</p></details>
+  <details><summary>Which apps and banks does it read?</summary><p>Google Pay, PhonePe and Paytm notifications, and
+    bank SMS alerts. SBI, HDFC and ICICI have dedicated parsers; alerts from other banks, including card spends, go
+    through a general parser that recognises amounts, debits and credits.</p></details>
+  <details><summary>Is anything saved without me checking it?</summary><p>No. Every detected payment waits in a review
+    list until you confirm or dismiss it.</p></details>
+  <details><summary>Is my notification content uploaded?</summary><p>No. Parsing runs on your phone, and the personal
+    tracker has no server to send it to.</p></details>
+</div>
+
+<a class="cta" href="https://play.google.com/store/apps/details?id=in.expenseledger.app&amp;referrer=utm_source%3Dsite_auto">Get it on Google Play</a>
+
+<footer>© 2026 Manthan Bhatt · <a href="../">Vaultsum</a> · <a href="../split-expenses-with-friends/">Split expenses</a> ·
+  <a href="../private-expense-tracker/">Privacy-first tracking</a> · <a href="../privacy/">Privacy policy</a> · <a href="../terms/">Terms</a></footer>
+</main>
+</body>
+</html>

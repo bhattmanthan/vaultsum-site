@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /join/
+
+Sitemap: https://vaultsum.manthan.runs-on.dev/sitemap.xml
